@@ -23,10 +23,35 @@ Kotlin 中文语法糖实验工程，目标是用接近中文表达的 API 包�
 - **完整测试覆盖**: 所有功能都有详细的单元测试验证
 - **零性能损耗**: 基于Kotlin inline函数和类型别名，无额外运行时开销
 
+## 📚 详细文档
+
+- [使用说明文档](USAGE.md) - 详细的API使用指南和示例
+- [测试用例](kotlin-zh/src/test/java/com/ohuang/kotlin_zh/KotlinChineseDslTest.kt) - 完整的功能测试示例
+
+
 ## 🚀 快速开始
 
 ### 添加依赖
 
+### 使用jitpack依赖
+在 settings.gradle.kts 添加
+```kotlin 
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url = uri("https://jitpack.io") }
+		}
+	}
+```
+在您的 `build.gradle.kts` 文件中添加：
+```kotlin
+dependencies {
+	        implementation("com.github.ming123aaa:Kotlin-Chinese:Tag")
+	}
+```
+
+### 或者可以clone本项目后依赖
 在您的 `build.gradle.kts` 文件中添加：
 
 ```kotlin
@@ -166,10 +191,6 @@ kotlin-chinese/
 - **文档示例**: 提供更易懂的代码示例
 - **国际化项目**: 支持多语言开发团队
 
-## 📚 详细文档
-
-- [使用说明文档](USAGE.md) - 详细的API使用指南和示例
-- [测试用例](kotlin-zh/src/test/java/com/ohuang/kotlin_zh/KotlinChineseDslTest.kt) - 完整的功能测试示例
 
 ## ❓ 常见问题
 
@@ -195,14 +216,6 @@ A: 欢迎提交PR，请遵循现有代码风格并添加相应测试。
 
 欢迎提交 Issue 和 Pull Request！如果您有任何建议或发现了 bug，请随时联系我们。
 
-### 贡献步骤：
-
-1. Fork 本仓库
-2. 创建您的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启一个 Pull Request
-
 ### 编码规范
 
 - 遵循 Kotlin 官方编码规范
@@ -212,7 +225,7 @@ A: 欢迎提交PR，请遵循现有代码风格并添加相应测试。
 
 ## 📄 许可证
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+本项目采用 MIT 许可证 - 查看 [LICENSE](https://mit-license.org/) 文件了解详情
 
 ## 🙏 致谢
 
