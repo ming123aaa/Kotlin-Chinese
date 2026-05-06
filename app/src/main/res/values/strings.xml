@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kotlin-Chinese</string>
+    <string name="dsl_demo_title">Kotlin 中文 DSL 演示</string>
+    <string name="dsl_demo_run">重新执行示例</string>
+</resources>
